@@ -361,7 +361,9 @@ xs: 576px
   * {
     box-sizing: border-box;
   }
-
+  html{
+    scroll-behavior: smooth;
+  }
 
   
   body {
@@ -691,6 +693,12 @@ xs: 576px
   }
   
   @media (max-width: 992px) {
+    .section-catalog__animation{
+      display: none;
+    }
+    .section-catalog__animation-2{
+      display: none;
+    }
     .catalog__item {
       width: 50%;
     }
@@ -705,6 +713,7 @@ xs: 576px
   }
   
   @media (max-width: 767px) {
+    
     .catalog__item {
       width: 100%;
       margin-bottom: 50px;
@@ -731,7 +740,43 @@ xs: 576px
     }
   }
   /* catalog end */
-  
+  .section-catalog__animation{
+    background-image: url(../img/наклейка3.png);
+    width: 160px;
+    height: 110px;
+    background-size: 165%;
+    position: absolute;
+    z-index: 0;
+    background-repeat: no-repeat;
+    animation: swing 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .section-catalog__animation-2{
+    background-image: url(../img/наклейка.png);
+    width: 160px;
+    height: 110px;
+    background-size: 90%;
+    position: absolute;
+    left: 77%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    animation: swing 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  @keyframes swing{
+    0%{
+      transform: rotateZ(2deg);
+    }
+    100%{
+      transform: rotateZ(-2deg);
+    }
+  }
+  @keyframes wave{
+    0%{
+      transform:  rotateZ(0deg) translate3d(0,1%,0) rotateZ(0deg);
+    }
+    100%{
+      transform:  rotateZ(360deg) translate3d(0,1%,0) rotateZ(-360deg);
+    }	
+  }
   /* product start */
   .product {
     display: flex;
@@ -745,11 +790,12 @@ xs: 576px
   .product__img {
     display: block;
     margin: 0 auto 15px;
-    width: 340px;
-    height: 207px;
+    width: 290px;
+    height: 257px;
     border-radius: 20px;
+    
   }
-  
+
   .product__title {
     margin: 0 0 10px;
     font-family: 'Montserrat', sans-serif;
@@ -1059,15 +1105,25 @@ xs: 576px
   
   /* logo start */
   .logo {
-    width: 100px;
+    width: 60px;
     height: 50px;
+    
   }
   .logo img{
-    width: 90px;
     position: relative;
-    bottom: 8px;
+    bottom: 5px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    border-radius: 50%;
+   
   }
- 
+  .logo img:hover{
+    animation: wave 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    box-shadow: 0 0 15px #ffef0f;
+    
+
+
+  }
   /* logo end */
   
   /* components end */
@@ -1262,7 +1318,6 @@ xs: 576px
     color: #fff;
     position: relative;
   }
-  
   .section-about__container {
     position: relative;
     display: flex;
@@ -1278,6 +1333,16 @@ xs: 576px
     height: 100%;
     object-fit: cover;
   }
+  .section-about__img-2 {
+    position: absolute;
+    top: -30%;
+    left: 43%;
+    width: 20%;
+    height: 165%;
+    background-image: url(../img/logotip.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+  }
   
   .section-about__content {
     width: 50%;
@@ -1287,12 +1352,14 @@ xs: 576px
   .section-about__title {
     text-align: left;
     margin-bottom: 20px;
+    margin-left: 30px;
   }
   
   .section-about__text {
     font-size: 18px;
     line-height: 1.67;
     margin: 0;
+    margin-left: 30px;
   }
   
   @media (max-width: 1200px) {
@@ -1335,15 +1402,24 @@ xs: 576px
   .section-contacts__img {
     position: absolute;
     background: no-repeat;
-    background-size: cover;
-    width: 672px;
-    height: 397px;
-    right: -350px;
-    bottom: -100px;
+    background-size: 90%;
+    width:572px;
+    height: 297px;
+    left: 60%;
+    bottom: 10%;
   }
-  
+  .section-contacts__img-2 {
+    position: absolute;
+    background: no-repeat;
+    background-size: 90%;
+    width:572px;
+    height: 195px;
+    left: 70%;
+    border-radius: 80%;
+    bottom: 81%;
+  }
   .sectoin-contacts__title {
-    margin-bottom: -60px;
+    margin-bottom: -110px;
   }
   
   .contacts {
@@ -1434,6 +1510,9 @@ xs: 576px
   @media (max-width: 992px) {
     .contacts__map {
       height: 350px;
+    }
+    .section-contacts__img-2 {
+      display: none;
     }
   }
   
