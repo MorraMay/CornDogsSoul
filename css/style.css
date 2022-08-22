@@ -808,6 +808,7 @@ xs: 576px
   .product__description {
     margin: 0;
     color: #19d697;
+    text-align: center;
   }
   .product__content {
     margin-bottom: 25px;
@@ -943,15 +944,7 @@ xs: 576px
       font-size: 25px;
      
     }
-    .tik{
-      color: #1f1f1f;
-    }
-    .facebook{
-      color: #1f1f1f;
-    }
-    .insta{
-      color: #1f1f1f;
-    }
+    
   }
   /* socials end */
   
@@ -1387,6 +1380,16 @@ xs: 576px
       width: 500px;
       max-width: 100%;
     }
+    .section-about__img-2 {
+      position: absolute;
+      top: -37%;
+      left: 60%;
+      width: 40%;
+      height: 165%;
+      background-image: url(../img/logotip.png);
+      background-repeat: no-repeat;
+      background-size: 70%;
+    }
   }
   /* section-about end */
   
@@ -1511,7 +1514,7 @@ xs: 576px
   
   @media (max-width: 992px) {
     .contacts__map {
-      height: 350px;
+      height: 300px;
     }
     .section-contacts__img-2 {
       display: none;
