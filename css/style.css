@@ -1384,9 +1384,9 @@ xs: 576px
     }
     .section-about__img-2 {
       position: absolute;
-      top: -15%;
+      top: -19%;
       left: 60%;
-      width: 40%;
+      width: 38%;
       height: 165%;
       background-image: url(../img/logotip.png);
       background-repeat: no-repeat;
@@ -1639,7 +1639,7 @@ xs: 576px
     font-size: 16px;
     font-weight: 900;
   }
-  
+
   .popup__subtitle--order {
     max-width: 360px;
     margin: 0 auto 40px;
