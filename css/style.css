@@ -1633,6 +1633,12 @@ xs: 576px
     text-align: center;
     font-size: 24px;
   }
+  .popup__subtitle-2{
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+  }
   
   .popup__subtitle--order {
     max-width: 360px;
