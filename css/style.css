@@ -1405,7 +1405,8 @@ xs: 576px
     background-size: 90%;
     width:572px;
     height: 297px;
-    left: 60%;
+    left: 65%;
+    border-radius: 80%;
     bottom: 10%;
   }
   .section-contacts__img-2 {
@@ -1413,10 +1414,10 @@ xs: 576px
     background: no-repeat;
     background-size: 90%;
     width:572px;
-    height: 195px;
-    left: 70%;
-    border-radius: 80%;
-    bottom: 81%;
+    height: 220px;
+    left: 62%;
+    bottom: 76%;
+    animation: swing 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   .sectoin-contacts__title {
     margin-bottom: -110px;
@@ -1442,6 +1443,7 @@ xs: 576px
   .contacts__map {
     height: 450px;
     background: #fef0b4;
+    background-image: url(../img/Карта.png);
   }
   
   .contacts__item {
