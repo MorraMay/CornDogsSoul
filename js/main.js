@@ -294,61 +294,6 @@
   })();
   /* product end */
   
-  /* map start */
-  ;(function() {
-    var sectionContacts = document.querySelector('.section-contacts');
-  
-    var ymapInit = function() {
-      if (typeof ymaps === 'undefined') {
-        return;
-      }
-    
-      ymaps.ready(function () {
-        var myMap = new ymaps.Map('ymap', {
-                center: [55.755241, 37.617779],
-                zoom: 16
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-    
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                balloonContent: 'адреса'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'маркер',
-                iconImageSize: [40, 63.2],
-                iconImageOffset: [-50, -38]
-            });
-    
-        myMap.geoObjects.add(myPlacemark);
-    
-        myMap.behaviors.disable('scrollZoom');
-      });
-    };
-  
-    var ymapLoad = function() {
-      var script = document.createElement('script');
-      script.src = '';
-      myLib.body.appendChild(script);
-      script.addEventListener('load', mapInit);
-    };
-  
-    var checkYmapInit = function() {
-      var sectionContactsTop = sectionContacts.getBoundingClientRect().top;
-      var scrollTop = window.pageYOffset;
-      var sectionContactsOffsetTop = scrollTop + sectionContactsTop;
-  
-      if (scrollTop + window.innerHeight > sectionContactsOffsetTop) {
-        ymapLoad();
-        window.removeEventListener('scroll', checkYmapInit);
-      }
-    };
-  
-    window.addEventListener('scroll', checkYmapInit);
-    checkYmapInit();
-  })();
-  /* map end */
-  
   /* form start */
   ;(function() {
     var forms = document.querySelectorAll('.form-send');
