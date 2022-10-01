@@ -740,6 +740,13 @@ xs: 576px
     }
   }
   /* catalog end */
+  .anim-sec{
+    position: relative;
+    display: flex;
+    justify-content:center;
+ 
+  }
+
   .section-catalog__animation{
     background-image: url(../img/наклейка3.png);
     width: 160px;
@@ -747,6 +754,7 @@ xs: 576px
     background-size: 165%;
     position: absolute;
     z-index: 0;
+    margin-right: 400px;
     background-repeat: no-repeat;
     animation: swing 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
@@ -754,9 +762,9 @@ xs: 576px
     background-image: url(../img/наклейка.png);
     width: 160px;
     height: 110px;
+    margin-left: 300px;
     background-size: 90%;
     position: absolute;
-    left: 77%;
     z-index: 0;
     background-repeat: no-repeat;
     animation: swing 1.2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
